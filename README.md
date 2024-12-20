@@ -11,6 +11,16 @@ Put a GitHub token with the right requirements in a file named `.secrets`, with 
 export GITHUB_TOKEN=ghp_XXXXXJrdNH0CNHPpC6PVMTI6ZMjUl20XXXXX
 ```
 
+Prepare the machine!! (check in the script the env vars to adjust to your machine).
+
+```
+./prepare_environment.sh
+```
+
+It should take between 20-40 minutes, depending on your machine/network.
+
+You should have now a new lxd instance, you can log in with `lxc exec openstack -- su --login ubuntu`
+
 ## Check that everything is ok
 
 ```
