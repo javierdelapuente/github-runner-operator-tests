@@ -52,9 +52,9 @@ write_files:
                  charms:
                    glance-k8s:
                      storage:
-                       local-repository: "10G"
+                       local-repository: "30G"
                      config:
-                       image-size-cap: 5G
+                       image-size-cap: 15G
 
 users:
   - default

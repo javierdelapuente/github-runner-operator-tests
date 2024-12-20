@@ -17,6 +17,9 @@ export MICROSTACK_RISK
 export REPOSITORY
 export GITHUB_TOKEN
 
+DEBIAN_FRONTEND=noninteractive sudo apt update
+DEBIAN_FRONTEND=noninteractive sudo apt-get install retry -y
+
 lxc delete openstack --force || :
 
 lxc init ubuntu:24.04 openstack --vm -c limits.cpu=${CPUS} -c limits.memory=${RAM_MEMORY} -d root,size=${ROOT_DISK_SIZE} --config=user.user-data="$(cat ./openstack-user-data | envsubst '$MICROSTACK_RISK,$REPOSITORY,$GITHUB_TOKEN')"
