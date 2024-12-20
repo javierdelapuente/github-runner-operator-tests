@@ -9,6 +9,7 @@ GITHUB_OWNER=javierdelapuente
 MICROSTACK_RISK=beta
 RAM_MEMORY=20GiB
 CPUS=12
+# Check the glance configuration in openstack-user-data if you want to decrease the disk size...
 ROOT_DISK_SIZE=100GiB
 
 REPOSITORY=${GITHUB_OWNER}/github-runner-operator
